@@ -9,7 +9,7 @@ services:
       environment:
         MYSQL_ROOT_PASSWORD: root  
       volumes: 
-      - /home/ricardo/Cursos/Pedbot/Docker:/var/lib/mysql
+      - /home/ricardo/Cursos/Pedbot/Docker:/var/lib/mysql        
 
   php:
       image: phpmyadmin
@@ -19,4 +19,11 @@ services:
       environment:
         - PMA_ARBITRARY=1
       volumes:
-      - /home/ricardo/Cursos/Pedbot/Docker:/var/lib/phpmyadmin
+        - /home/ricardo/Cursos/Pedbot/Docker:/var/lib/phpmyadmin
+      
+
+networks:
+  default: 
+    external:
+      name: rede_interna
+
