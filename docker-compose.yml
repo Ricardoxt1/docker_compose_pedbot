@@ -11,7 +11,7 @@ services:
         MYSQL_USERNAME: root 
         MYSQL_ROOT_PASSWORD: root
       volumes:
-        - ./Cursos/Pedbot/Docker/:/var/lib/phpmyadmin
+        - ./php/:/var/lib/phpmyadmin
       networks:
         - docker_rede_docker
       links:
@@ -25,7 +25,7 @@ services:
       environment:
         MYSQL_ROOT_PASSWORD: "root"
       volumes:  
-        - ./Cursos/Pedbot/Docker/:/var/lib/mysql
+        - ./mysql/:/var/lib/mysql
       networks:
         - docker_rede_docker
 
